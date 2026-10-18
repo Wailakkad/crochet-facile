@@ -1,0 +1,6 @@
+{
+  "name": "Crochet Facile - 4 Décorations de Noël au Crochet",
+  "description": "Boutique de patrons de crochet PDF en français : sapin, clochettes, mini chaussette et guirlande de sapins de Noël faits main.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
