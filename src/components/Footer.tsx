@@ -12,6 +12,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
     const elem = document.querySelector(id);
     if (elem) {
       elem.scrollIntoView({ behavior: 'smooth' });
+    } else if (window.location.pathname !== '/') {
+      // Section lives on the landing page: navigate there instead of doing nothing.
+      window.location.assign(`/${id}`);
     }
   };
 

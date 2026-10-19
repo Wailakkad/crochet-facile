@@ -23,15 +23,24 @@ export const Navbar: React.FC<NavbarProps> = () => {
     { label: 'Le kit', href: '#le-kit' },
     { label: 'Les modèles', href: '#les-modeles' },
     { label: 'Pourquoi ce kit ?', href: '#pourquoi-ce-kit' },
+    { label: 'Blog', href: '/blog' },
     { label: 'FAQ', href: '#faq' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith('#')) {
+      // Real page link (e.g. /blog): close the mobile menu and let the browser navigate.
+      setMobileMenuOpen(false);
+      return;
+    }
     e.preventDefault();
     setMobileMenuOpen(false);
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
+    } else if (window.location.pathname !== '/') {
+      // Section lives on the landing page: navigate there instead of doing nothing.
+      window.location.assign(`/${href}`);
     }
   };
 
@@ -45,7 +54,13 @@ export const Navbar: React.FC<NavbarProps> = () => {
         <div className="flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <a
-            href="#"
+            href="/"
+            onClick={(e) => {
+              if (window.location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
             className="flex items-center gap-2.5 text-[#355748] group"
             aria-label="Crochet Facile - Accueil"
           >
