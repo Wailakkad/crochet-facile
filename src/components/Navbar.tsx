@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { YarnIcon } from './YarnIcon';
 import { CHECKOUT_URL, BRAND } from '../config/constants';
+import { ROUTES } from '../config/site';
 
 interface NavbarProps {
   onOpenLegal?: (title: string, content: string) => void;
@@ -23,6 +24,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
     { label: 'Le kit', href: '#le-kit' },
     { label: 'Les modèles', href: '#les-modeles' },
     { label: 'Pourquoi ce kit ?', href: '#pourquoi-ce-kit' },
+    { label: 'Carnet d’idées gratuit', href: ROUTES.freeChristmasIdeas },
     { label: 'Blog', href: '/blog' },
     { label: 'FAQ', href: '#faq' },
   ];

@@ -1,4 +1,4 @@
-import { absoluteUrl } from '../config/site';
+import { absoluteUrl, ROUTES } from '../config/site';
 
 export interface SeoRecord {
   /** Unique <title> tag of the page. */
@@ -124,4 +124,34 @@ export const HOME_PAGE: SeoRecord = {
   ogImageAlt:
     'Les 4 décorations de Noël au crochet : sapin amigurumi, clochettes, mini chaussette et guirlande',
   jsonLd: HOME_PRODUCT_JSON_LD,
+};
+
+const FREE_CHRISTMAS_TITLE =
+  'Cahier gratuit – 40 Idées de Noël au Crochet à Croquer | Crochet Facile';
+const FREE_CHRISTMAS_DESCRIPTION =
+  'Télécharge gratuitement un carnet de 40 idées de décorations et amigurumis de Noël au crochet. 40 photos, 4 univers kawaii, pour imaginer tes prochaines créations. Ce n’est pas un tutoriel, mais un carnet d’inspiration.';
+
+export const FREE_CHRISTMAS_LEAD_PAGE: SeoRecord = {
+  title: FREE_CHRISTMAS_TITLE,
+  description: FREE_CHRISTMAS_DESCRIPTION,
+  keywords:
+    'idées noël crochet, carnet gratuit crochet, amigurumi noël, décoration noël crochet, noël kawaii crochet',
+  path: ROUTES.freeChristmasIdeas,
+  ogType: 'website',
+  ogImage: HOME_IMAGE,
+  ogImageAlt:
+    'Carnet gratuit : 40 idées de Noël au crochet à croquer — Crochet Facile',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: FREE_CHRISTMAS_TITLE,
+    description: FREE_CHRISTMAS_DESCRIPTION,
+    url: absoluteUrl(ROUTES.freeChristmasIdeas),
+    inLanguage: 'fr-FR',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Crochet Facile',
+      url: absoluteUrl(ROUTES.home),
+    },
+  },
 };

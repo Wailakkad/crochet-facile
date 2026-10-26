@@ -1,5 +1,6 @@
 import IMAGES from '../assets/images';
 import { absoluteUrl, ROUTES } from '../config/site';
+import { FREE_CHRISTMAS_LEAD_PAGE } from './seo';
 import type { SeoRecord } from './seo';
 
 /* ------------------------------------------------------------------ */
@@ -583,6 +584,7 @@ export const BLOG_PAGES: Record<string, SeoRecord> = {
       ]),
     ],
   },
+  [ROUTES.freeChristmasIdeas]: FREE_CHRISTMAS_LEAD_PAGE,
 };
 
 export const SITEMAP_PATHS: string[] = [
@@ -590,4 +592,5 @@ export const SITEMAP_PATHS: string[] = [
   ROUTES.blog,
   ROUTES.decorationsNoel,
   ROUTES.crochetNoelFacile,
+  ROUTES.freeChristmasIdeas,
 ];

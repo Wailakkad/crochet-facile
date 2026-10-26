@@ -3,6 +3,7 @@ import App from './App';
 import { ArticleDecorationsNoel } from './pages/ArticleDecorationsNoel';
 import { ArticleCrochetNoelFacile } from './pages/ArticleCrochetNoelFacile';
 import { BlogHub } from './pages/BlogHub';
+import { FreeChristmasIdeasPage } from './pages/FreeChristmasIdeasPage';
 import { Seo } from './components/blog/Seo';
 import { HOME_PAGE } from './content/seo';
 import { ROUTES } from './config/site';
@@ -22,6 +23,8 @@ export default function Root() {
       return <ArticleDecorationsNoel />;
     case ROUTES.crochetNoelFacile:
       return <ArticleCrochetNoelFacile />;
+    case ROUTES.freeChristmasIdeas:
+      return <FreeChristmasIdeasPage />;
     default:
       return (
         <>

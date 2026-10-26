@@ -38,6 +38,7 @@ const BLOG_ROUTES = [
   '/blog',
   '/blog/decorations-noel-crochet',
   '/blog/crochet-noel-facile',
+  '/40-idees-noel-crochet-gratuit',
 ];
 const SITEMAP_PATHS = ['/', ...BLOG_ROUTES];
 

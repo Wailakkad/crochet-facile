@@ -12,6 +12,7 @@ export const ROUTES = {
   blog: '/blog',
   decorationsNoel: '/blog/decorations-noel-crochet',
   crochetNoelFacile: '/blog/crochet-noel-facile',
+  freeChristmasIdeas: '/40-idees-noel-crochet-gratuit',
 } as const;
 
 /** Returns an absolute URL when SITE_URL is configured, otherwise a root-relative path. */
