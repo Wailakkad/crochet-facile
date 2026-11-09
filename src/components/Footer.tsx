@@ -1,22 +1,20 @@
 import React from 'react';
 import { YarnIcon } from './YarnIcon';
 import { BRAND } from '../config/constants';
+import { ROUTES } from '../config/site';
 
 interface FooterProps {
   onOpenLegal: (type: 'cgv' | 'privacy' | 'mentions' | 'contact') => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
-  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const elem = document.querySelector(id);
-    if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' });
-    } else if (window.location.pathname !== '/') {
-      // Section lives on the landing page: navigate there instead of doing nothing.
-      window.location.assign(`/${id}`);
-    }
-  };
+  const navItems: { label: string; href: string }[] = [
+    { label: 'Accueil', href: ROUTES.home },
+    { label: 'Boutique', href: ROUTES.store },
+    { label: 'Ressources gratuites', href: ROUTES.freeResources },
+    { label: 'Blog', href: ROUTES.blog },
+    { label: 'Questions fréquentes', href: '/#faq' },
+  ];
 
   return (
     <footer className="bg-[#355748] text-[#FFF9F2] pt-16 sm:pt-20 pb-12 border-t border-[#91B5A3]/20">
@@ -46,42 +44,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               Navigation
             </h4>
             <ul className="space-y-3 text-sm text-[#FFF9F2]/80">
-              <li>
-                <a
-                  href="#le-kit"
-                  onClick={(e) => scrollTo(e, '#le-kit')}
-                  className="hover:text-white transition-colors"
-                >
-                  Le kit
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#les-modeles"
-                  onClick={(e) => scrollTo(e, '#les-modeles')}
-                  className="hover:text-white transition-colors"
-                >
-                  Les modèles
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pourquoi-ce-kit"
-                  onClick={(e) => scrollTo(e, '#pourquoi-ce-kit')}
-                  className="hover:text-white transition-colors"
-                >
-                  Pourquoi ce kit ?
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  onClick={(e) => scrollTo(e, '#faq')}
-                  className="hover:text-white transition-colors"
-                >
-                  Questions fréquentes
-                </a>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

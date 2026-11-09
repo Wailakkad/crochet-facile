@@ -39,6 +39,10 @@ const BLOG_ROUTES = [
   '/blog/decorations-noel-crochet',
   '/blog/crochet-noel-facile',
   '/40-idees-noel-crochet-gratuit',
+  '/sapin-au-crochet-patron-gratuit',
+  '/boutique',
+  '/ressources-gratuites',
+  '/patron-mini-breloques-amigurumi',
 ];
 const SITEMAP_PATHS = ['/', ...BLOG_ROUTES];
 

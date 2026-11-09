@@ -155,3 +155,179 @@ export const FREE_CHRISTMAS_LEAD_PAGE: SeoRecord = {
     },
   },
 };
+
+const SAPIN_PATRON_TITLE =
+  'Sapin au crochet – Patron gratuit en français | Crochet Facile';
+const SAPIN_PATRON_DESCRIPTION =
+  'Télécharge gratuitement le patron PDF du sapin de Noël au crochet en français. Un projet simple et festif à réaliser pour décorer ta maison. Sans inscription.';
+
+export const SAPIN_PATRON_PAGE: SeoRecord = {
+  title: SAPIN_PATRON_TITLE,
+  description: SAPIN_PATRON_DESCRIPTION,
+  keywords:
+    'sapin au crochet, patron sapin noël crochet, patron gratuit crochet, sapin noël crochet PDF, patron crochet français',
+  path: ROUTES.sapinPatron,
+  ogType: 'website',
+  ogImage: HOME_IMAGE,
+  ogImageAlt: 'Sapin de Noël au crochet — patron gratuit en français',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: SAPIN_PATRON_TITLE,
+    description: SAPIN_PATRON_DESCRIPTION,
+    url: absoluteUrl(ROUTES.sapinPatron),
+    inLanguage: 'fr-FR',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Crochet Facile',
+      url: absoluteUrl(ROUTES.home),
+    },
+  },
+};
+
+const STORE_TITLE =
+  'Boutique – Patrons de Crochet PDF en Français | Crochet Facile';
+const STORE_DESCRIPTION =
+  'Achetez vos patrons de crochet PDF en français : la collection de 4 décorations de Noël (sapin, clochettes, mini chaussette, guirlande) à 7,90 €. Téléchargement immédiat.';
+
+export const STORE_PAGE: SeoRecord = {
+  title: STORE_TITLE,
+  description: STORE_DESCRIPTION,
+  keywords:
+    'boutique crochet, patron crochet PDF, patron noël crochet, acheter patron crochet, kit crochet noël',
+  path: ROUTES.store,
+  ogType: 'website',
+  ogImage: HOME_IMAGE,
+  ogImageAlt: 'Boutique Crochet Facile — patrons de crochet PDF en français',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: STORE_TITLE,
+    description: STORE_DESCRIPTION,
+    url: absoluteUrl(ROUTES.store),
+    inLanguage: 'fr-FR',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Crochet Facile',
+      url: absoluteUrl(ROUTES.home),
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '4 Décorations de Noël au Crochet – Patrons PDF en Français',
+          url: absoluteUrl(ROUTES.home),
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Trio de Mini Breloques Amigurumi (Grenouille, Panda & Citron)',
+          url: absoluteUrl(ROUTES.breloques),
+        },
+      ],
+    },
+  },
+};
+
+const BRELOQUES_TITLE =
+  'Trio Mini Breloques Amigurumi – Grenouille, Panda & Citron (PDF) | Crochet Facile';
+const BRELOQUES_DESCRIPTION =
+  'Patron PDF de 3 mini breloques amigurumi en français : Grenouille, Panda et Citron. Guide de 14 pages, 20+ photos HD, niveau débutant, téléchargement immédiat à 3,49 €.';
+
+export const BRELOQUES_LANDING_PAGE: SeoRecord = {
+  title: BRELOQUES_TITLE,
+  description: BRELOQUES_DESCRIPTION,
+  keywords:
+    'breloque amigurumi, patron breloque crochet, panda amigurumi patron, grenouille amigurumi, citron crochet, porte-clés amigurumi, patron crochet débutant PDF',
+  path: ROUTES.breloques,
+  ogType: 'website',
+  ogImage:
+    'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794222377/hero_-_Trio_de_Mini_Breloques_Amigurumi_image.jpg',
+  ogImageAlt:
+    'Trio de mini breloques amigurumi : grenouille, panda et citron au crochet',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org/',
+      '@type': 'Product',
+      name: 'Trio de Mini Breloques Amigurumi (Grenouille, Panda & Citron) – Patron PDF',
+      image:
+        'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794222376/Votre_Patron_de_Breloques_image.jpg',
+      description:
+        'Guide PDF de 14 pages en français avec 3 patrons de mini breloques amigurumi : grenouille, panda et citron. Niveau débutant, 20+ photos HD et diagrammes.',
+      brand: {
+        '@type': 'Brand',
+        name: 'Crochet Facile',
+      },
+      offers: {
+        '@type': 'Offer',
+        url: absoluteUrl(ROUTES.breloques),
+        priceCurrency: 'EUR',
+        price: '3.49',
+        priceValidUntil: '2027-12-31',
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: BRELOQUES_TITLE,
+      description: BRELOQUES_DESCRIPTION,
+      url: absoluteUrl(ROUTES.breloques),
+      inLanguage: 'fr-FR',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Crochet Facile',
+        url: absoluteUrl(ROUTES.home),
+      },
+    },
+  ],
+};
+
+const FREE_RESOURCES_TITLE =
+  'Ressources Gratuites – Patrons & Carnets PDF | Crochet Facile';
+const FREE_RESOURCES_DESCRIPTION =
+  'Téléchargez gratuitement nos ressources crochet : le carnet de 40 idées de Noël au crochet et le patron du sapin de Noël en français. Sans engagement.';
+
+export const FREE_RESOURCES_PAGE: SeoRecord = {
+  title: FREE_RESOURCES_TITLE,
+  description: FREE_RESOURCES_DESCRIPTION,
+  keywords:
+    'patron gratuit crochet, ressources gratuites crochet, carnet idées noël crochet, patron sapin noël crochet gratuit',
+  path: ROUTES.freeResources,
+  ogType: 'website',
+  ogImage: HOME_IMAGE,
+  ogImageAlt: 'Ressources gratuites Crochet Facile — patrons et carnets PDF',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: FREE_RESOURCES_TITLE,
+    description: FREE_RESOURCES_DESCRIPTION,
+    url: absoluteUrl(ROUTES.freeResources),
+    inLanguage: 'fr-FR',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Crochet Facile',
+      url: absoluteUrl(ROUTES.home),
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '40 Idées de Noël au Crochet à Croquer',
+          url: absoluteUrl(ROUTES.freeChristmasIdeas),
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Sapin au crochet — patron gratuit',
+          url: absoluteUrl(ROUTES.sapinPatron),
+        },
+      ],
+    },
+  },
+};

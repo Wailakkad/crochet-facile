@@ -4,6 +4,10 @@ import { ArticleDecorationsNoel } from './pages/ArticleDecorationsNoel';
 import { ArticleCrochetNoelFacile } from './pages/ArticleCrochetNoelFacile';
 import { BlogHub } from './pages/BlogHub';
 import { FreeChristmasIdeasPage } from './pages/FreeChristmasIdeasPage';
+import { SapinPatronPage } from './pages/SapinPatronPage';
+import { StorePage } from './pages/StorePage';
+import { FreeResourcesPage } from './pages/FreeResourcesPage';
+import { BreloquesLandingPage } from './pages/BreloquesLandingPage';
 import { Seo } from './components/blog/Seo';
 import { HOME_PAGE } from './content/seo';
 import { ROUTES } from './config/site';
@@ -25,6 +29,14 @@ export default function Root() {
       return <ArticleCrochetNoelFacile />;
     case ROUTES.freeChristmasIdeas:
       return <FreeChristmasIdeasPage />;
+    case ROUTES.sapinPatron:
+      return <SapinPatronPage />;
+    case ROUTES.store:
+      return <StorePage />;
+    case ROUTES.freeResources:
+      return <FreeResourcesPage />;
+    case ROUTES.breloques:
+      return <BreloquesLandingPage />;
     default:
       return (
         <>

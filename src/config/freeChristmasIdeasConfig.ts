@@ -4,6 +4,10 @@
 export const FREE_CHRISTMAS_IDEAS_PDF_URL =
   '/downloads/40%20Id%C3%A9es%20de%20No%C3%ABl%20au%20Crochet%20%C3%A0%20Croquer.pdf';
 
+/** Public URL of the free "Sapin au crochet" PDF (served from public/downloads). */
+export const SAPIN_PATRON_PDF_URL =
+  '/downloads/Sapin%20au%20crochet%20%20patron%20gratuit%20en%20fran%C3%A7ais.pdf';
+
 /**
  * Public Google Apps Script Web App URL that receives POST requests
  * with JSON body { name, email, source } sent as Content-Type text/plain

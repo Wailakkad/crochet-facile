@@ -1,42 +1,10 @@
 import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { CHECKOUT_URL } from '../config/constants';
+import { PATTERNS } from '../config/catalog';
 
 export const PatternsGrid: React.FC = () => {
-  const patterns = [
-    {
-      number: '01',
-      title: 'Sapin de Noël',
-      description: 'Un adorable petit sapin avec son étoile et son nœud rouge.',
-      image: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1792356092/Sapin_de_No%C3%ABl.jpg',
-      alt: 'Sapin de Noël au crochet amigurumi avec étoile jaune et ruban rouge',
-      details: 'Amigurumi de table ou suspension',
-    },
-    {
-      number: '02',
-      title: 'Clochettes de Noël',
-      description: 'De jolies clochettes colorées pour décorer votre intérieur.',
-      image: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1792356092/Clochettes_de_No%C3%ABl.jpg',
-      alt: 'Clochettes de Noël au crochet festives et colorées',
-      details: 'Ornements de sapin et table',
-    },
-    {
-      number: '03',
-      title: 'Mini chaussette',
-      description: 'Une décoration traditionnelle aux couleurs de Noël.',
-      image: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1792356091/Mini_chaussette.jpg',
-      alt: 'Mini chaussette de Noël au crochet faite main',
-      details: 'Suspension délicate pour sapin',
-    },
-    {
-      number: '04',
-      title: 'Guirlande de sapins',
-      description: 'Une guirlande colorée pour une décoration faite main.',
-      image: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1792356092/Guirlande_de_sapins.jpg',
-      alt: 'Guirlande de sapins au crochet sur ficelle naturelle',
-      details: 'Décoration murale ou cheminée',
-    },
-  ];
+  const patterns = PATTERNS;
 
   return (
     <section id="les-modeles" className="py-20 sm:py-28 bg-[#F7F3ED]/70 border-y border-[#355748]/10">
