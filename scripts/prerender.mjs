@@ -43,6 +43,7 @@ const BLOG_ROUTES = [
   '/boutique',
   '/ressources-gratuites',
   '/patron-mini-breloques-amigurumi',
+  '/patron-5-gnomes-noel-crochet',
 ];
 const SITEMAP_PATHS = ['/', ...BLOG_ROUTES];
 

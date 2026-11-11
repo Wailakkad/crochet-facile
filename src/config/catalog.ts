@@ -96,6 +96,15 @@ export interface Product {
 /** Payhip checkout link for the breloques product. */
 export const BRELOQUES_CHECKOUT_URL = 'https://payhip.com/b/qVvFG';
 
+/** Payhip checkout link for the 5 gnomes product — replace with the real listing URL. */
+export const GNOMES_CHECKOUT_URL = 'https://payhip.com/b/LE2Ap';
+
+const GNOMES_IMAGES = {
+  group: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794394874/Tes_5_Gnomes_de_No%C3%ABl_image.jpg',
+  hero: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794394794/Gnomes_de_No%C3%ABl_au_Crochet_hero_image.jpg',
+  pereNoel: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794394793/Le_P%C3%A8re_No%C3%ABl.jpg',
+} as const;
+
 export const PRODUCTS: Product[] = [
   {
     slug: 'decorations-noel',
@@ -157,10 +166,46 @@ export const PRODUCTS: Product[] = [
       'Téléchargement immédiat après achat',
     ],
   },
+  {
+    slug: '5-gnomes-noel',
+    name: '5 Gnomes de Noël au Crochet : 1 Base, 5 Déco Uniques',
+    category: 'Patron PDF · 5 personnages',
+    tagline: 'Une seule base, cinq gnomes tous différents.',
+    description:
+      'Père Noël, sapin, bonhomme de neige, flocon de neige et pain d’épices : un seul corps, un seul bonnet, un seul nez et une seule barbe — tu changes les couleurs et les détails, et chaque gnome devient un personnage à part. Patron PDF de 23 pages en français.',
+    price: '2,49 €',
+    priceNumber: 2.49,
+    currency: 'EUR',
+    checkoutUrl: GNOMES_CHECKOUT_URL,
+    landingHref: '/patron-5-gnomes-noel-crochet',
+    badge: 'Nouveau',
+    images: [
+      {
+        src: GNOMES_IMAGES.group,
+        alt: 'Les 5 gnomes de Noël au crochet : Père Noël, sapin, bonhomme de neige, flocon et pain d’épices',
+      },
+      {
+        src: GNOMES_IMAGES.hero,
+        alt: '5 Gnomes de Noël au Crochet — patron PDF en français',
+      },
+      {
+        src: GNOMES_IMAGES.pereNoel,
+        alt: 'Gnome Père Noël au crochet — patron PDF',
+      },
+    ],
+    features: [
+      '1 base simple, 5 gnomes uniques (23 pages)',
+      '100 % en français, abréviations expliquées',
+      'Tour par tour, avec le total de mailles',
+      'Hauteur finale ≈ 18 cm · crochet 3,75 mm',
+      'Téléchargement immédiat après achat',
+    ],
+  },
 ];
 
 export const FEATURED_PRODUCT: Product = PRODUCTS[0];
 export const BRELOQUES_PRODUCT: Product = PRODUCTS[1];
+export const GNOMES_PRODUCT: Product = PRODUCTS[2];
 
 /** True when a product has no real photo yet (styled placeholder is shown). */
 export const isImagePlaceholder = (product: Product): boolean =>

@@ -8,6 +8,7 @@ import { SapinPatronPage } from './pages/SapinPatronPage';
 import { StorePage } from './pages/StorePage';
 import { FreeResourcesPage } from './pages/FreeResourcesPage';
 import { BreloquesLandingPage } from './pages/BreloquesLandingPage';
+import { GnomesNoelLandingPage } from './pages/GnomesNoelLandingPage';
 import { Seo } from './components/blog/Seo';
 import { HOME_PAGE } from './content/seo';
 import { ROUTES } from './config/site';
@@ -37,6 +38,8 @@ export default function Root() {
       return <FreeResourcesPage />;
     case ROUTES.breloques:
       return <BreloquesLandingPage />;
+    case ROUTES.gnomesNoel:
+      return <GnomesNoelLandingPage />;
     default:
       return (
         <>

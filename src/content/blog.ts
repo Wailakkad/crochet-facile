@@ -4,6 +4,7 @@ import {
   BRELOQUES_LANDING_PAGE,
   FREE_CHRISTMAS_LEAD_PAGE,
   FREE_RESOURCES_PAGE,
+  GNOMES_NOEL_LANDING_PAGE,
   SAPIN_PATRON_PAGE,
   STORE_PAGE,
 } from './seo';
@@ -595,6 +596,7 @@ export const BLOG_PAGES: Record<string, SeoRecord> = {
   [ROUTES.store]: STORE_PAGE,
   [ROUTES.freeResources]: FREE_RESOURCES_PAGE,
   [ROUTES.breloques]: BRELOQUES_LANDING_PAGE,
+  [ROUTES.gnomesNoel]: GNOMES_NOEL_LANDING_PAGE,
 };
 
 export const SITEMAP_PATHS: string[] = [
@@ -607,4 +609,5 @@ export const SITEMAP_PATHS: string[] = [
   ROUTES.store,
   ROUTES.freeResources,
   ROUTES.breloques,
+  ROUTES.gnomesNoel,
 ];

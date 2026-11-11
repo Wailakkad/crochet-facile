@@ -226,6 +226,12 @@ export const STORE_PAGE: SeoRecord = {
           name: 'Trio de Mini Breloques Amigurumi (Grenouille, Panda & Citron)',
           url: absoluteUrl(ROUTES.breloques),
         },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: '5 Gnomes de Noël au Crochet : 1 Base, 5 Déco Uniques',
+          url: absoluteUrl(ROUTES.gnomesNoel),
+        },
       ],
     },
   },
@@ -276,6 +282,62 @@ export const BRELOQUES_LANDING_PAGE: SeoRecord = {
       name: BRELOQUES_TITLE,
       description: BRELOQUES_DESCRIPTION,
       url: absoluteUrl(ROUTES.breloques),
+      inLanguage: 'fr-FR',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Crochet Facile',
+        url: absoluteUrl(ROUTES.home),
+      },
+    },
+  ],
+};
+
+const GNOMES_NOEL_TITLE =
+  '5 Gnomes de Noël au Crochet – 1 Base, 5 Déco Uniques (PDF Français) | Crochet Facile';
+const GNOMES_NOEL_DESCRIPTION =
+  'Patron PDF de 5 gnomes de Noël au crochet en français : Père Noël, sapin, bonhomme de neige, flocon et pain d’épices sur une seule base. 23 pages, tour par tour, téléchargement immédiat à 2,49 €.';
+
+export const GNOMES_NOEL_LANDING_PAGE: SeoRecord = {
+  title: GNOMES_NOEL_TITLE,
+  description: GNOMES_NOEL_DESCRIPTION,
+  keywords:
+    'gnome noël crochet, gnome amigurumi patron, patron gnome noël PDF, père noël amigurumi, bonhomme de neige crochet, flocon de neige crochet, décoration noël crochet, patron crochet français',
+  path: ROUTES.gnomesNoel,
+  ogType: 'website',
+  ogImage:
+    'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794394794/Gnomes_de_No%C3%ABl_au_Crochet_hero_image.jpg',
+  ogImageAlt:
+    'Les 5 gnomes de Noël au crochet : Père Noël, sapin, bonhomme de neige, flocon et pain d’épices',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org/',
+      '@type': 'Product',
+      name: '5 Gnomes de Noël au Crochet : 1 Base, 5 Déco Uniques – Patron PDF en Français',
+      image: [
+        'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794394874/Tes_5_Gnomes_de_No%C3%ABl_image.jpg',
+      ],
+      description:
+        'Patron PDF de 23 pages en français : un seul corps, un seul bonnet, un seul nez et une seule barbe pour créer 5 gnomes de Noël uniques (Père Noël, sapin, bonhomme de neige, flocon de neige, pain d’épices).',
+      brand: {
+        '@type': 'Brand',
+        name: 'Crochet Facile',
+      },
+      offers: {
+        '@type': 'Offer',
+        url: absoluteUrl(ROUTES.gnomesNoel),
+        priceCurrency: 'EUR',
+        price: '2.49',
+        priceValidUntil: '2027-12-31',
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: GNOMES_NOEL_TITLE,
+      description: GNOMES_NOEL_DESCRIPTION,
+      url: absoluteUrl(ROUTES.gnomesNoel),
       inLanguage: 'fr-FR',
       isPartOf: {
         '@type': 'WebSite',
