@@ -20,6 +20,7 @@ export const ROUTES = {
   gnomesNoel: '/patron-5-gnomes-noel-crochet',
   lapinAmigurumi: '/patron-lapin-amigurumi-facile',
   bonhommeNeige: '/patron-bonhomme-de-neige-crochet',
+  cacaLicorne: '/caca-de-licorne-amigurumi-patron-gratuit',
 } as const;
 
 /** Returns an absolute URL when SITE_URL is configured, otherwise a root-relative path. */

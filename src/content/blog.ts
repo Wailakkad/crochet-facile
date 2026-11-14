@@ -3,6 +3,7 @@ import { absoluteUrl, ROUTES } from '../config/site';
 import {
   BONHOMME_NEIGE_LANDING_PAGE,
   BRELOQUES_LANDING_PAGE,
+  CACA_LICORNE_PAGE,
   FREE_CHRISTMAS_LEAD_PAGE,
   FREE_RESOURCES_PAGE,
   GNOMES_NOEL_LANDING_PAGE,
@@ -595,6 +596,7 @@ export const BLOG_PAGES: Record<string, SeoRecord> = {
   },
   [ROUTES.freeChristmasIdeas]: FREE_CHRISTMAS_LEAD_PAGE,
   [ROUTES.sapinPatron]: SAPIN_PATRON_PAGE,
+  [ROUTES.cacaLicorne]: CACA_LICORNE_PAGE,
   [ROUTES.store]: STORE_PAGE,
   [ROUTES.freeResources]: FREE_RESOURCES_PAGE,
   [ROUTES.breloques]: BRELOQUES_LANDING_PAGE,
@@ -610,6 +612,7 @@ export const SITEMAP_PATHS: string[] = [
   ROUTES.crochetNoelFacile,
   ROUTES.freeChristmasIdeas,
   ROUTES.sapinPatron,
+  ROUTES.cacaLicorne,
   ROUTES.store,
   ROUTES.freeResources,
   ROUTES.breloques,

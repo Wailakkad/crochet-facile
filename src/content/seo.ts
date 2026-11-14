@@ -185,6 +185,35 @@ export const SAPIN_PATRON_PAGE: SeoRecord = {
   },
 };
 
+const CACA_LICORNE_TITLE =
+  'Caca de Licorne Amigurumi – Patron Crochet Gratuit en Français | Crochet Facile';
+const CACA_LICORNE_DESCRIPTION =
+  'Crochetez votre propre Caca de Licorne, un amigurumi kawaii pastel et pailleté. Patron PDF gratuit de 7 pages en français, instructions tour par tour (49 tours). Téléchargement immédiat après inscription.';
+
+export const CACA_LICORNE_PAGE: SeoRecord = {
+  title: CACA_LICORNE_TITLE,
+  description: CACA_LICORNE_DESCRIPTION,
+  keywords:
+    'caca de licorne amigurumi, patron crochet gratuit, amigurumi kawaii crochet, patron licorne crochet français, amigurumi pastel spiral',
+  path: ROUTES.cacaLicorne,
+  ogType: 'website',
+  ogImage: HOME_IMAGE,
+  ogImageAlt: 'Caca de Licorne amigurumi au crochet — patron PDF gratuit en français',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: CACA_LICORNE_TITLE,
+    description: CACA_LICORNE_DESCRIPTION,
+    url: absoluteUrl(ROUTES.cacaLicorne),
+    inLanguage: 'fr-FR',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Crochet Facile',
+      url: absoluteUrl(ROUTES.home),
+    },
+  },
+};
+
 const STORE_TITLE =
   'Boutique – Patrons de Crochet PDF en Français | Crochet Facile';
 const STORE_DESCRIPTION =
@@ -466,7 +495,7 @@ export const BONHOMME_NEIGE_LANDING_PAGE: SeoRecord = {
 const FREE_RESOURCES_TITLE =
   'Ressources Gratuites – Patrons & Carnets PDF | Crochet Facile';
 const FREE_RESOURCES_DESCRIPTION =
-  'Téléchargez gratuitement nos ressources crochet : le carnet de 40 idées de Noël au crochet et le patron du sapin de Noël en français. Sans engagement.';
+  'Téléchargez gratuitement nos ressources crochet : le carnet de 40 idées de Noël, le patron du sapin et l’amigurumi Caca de Licorne en français. Sans engagement.';
 
 export const FREE_RESOURCES_PAGE: SeoRecord = {
   title: FREE_RESOURCES_TITLE,
@@ -503,6 +532,12 @@ export const FREE_RESOURCES_PAGE: SeoRecord = {
           position: 2,
           name: 'Sapin au crochet — patron gratuit',
           url: absoluteUrl(ROUTES.sapinPatron),
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Caca de Licorne Amigurumi — patron gratuit',
+          url: absoluteUrl(ROUTES.cacaLicorne),
         },
       ],
     },

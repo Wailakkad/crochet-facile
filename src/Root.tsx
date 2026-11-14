@@ -5,6 +5,7 @@ import { ArticleCrochetNoelFacile } from './pages/ArticleCrochetNoelFacile';
 import { BlogHub } from './pages/BlogHub';
 import { FreeChristmasIdeasPage } from './pages/FreeChristmasIdeasPage';
 import { SapinPatronPage } from './pages/SapinPatronPage';
+import { CacaLicornePage } from './pages/CacaLicornePage';
 import { StorePage } from './pages/StorePage';
 import { FreeResourcesPage } from './pages/FreeResourcesPage';
 import { BreloquesLandingPage } from './pages/BreloquesLandingPage';
@@ -34,6 +35,8 @@ export default function Root() {
       return <FreeChristmasIdeasPage />;
     case ROUTES.sapinPatron:
       return <SapinPatronPage />;
+    case ROUTES.cacaLicorne:
+      return <CacaLicornePage />;
     case ROUTES.store:
       return <StorePage />;
     case ROUTES.freeResources:

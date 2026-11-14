@@ -20,6 +20,13 @@ export const GOOGLE_APPS_SCRIPT_SIGNUP_URL =
 /** Tracking / list tag sent as `source` with each signup. */
 export const FREE_CHRISTMAS_IDEAS_SOURCE_TAG = 'free_christmas_ideas_40';
 
+/** Public URL of the free "Caca de Licorne Amigurumi" PDF (served from public/downloads). */
+export const CACA_LICORNE_PDF_URL =
+  '/downloads/Caca%20de%20Licorne%20Amigurumi%20%20Patron%20Crochet%20Gratuit%20en%20Fran%C3%A7ais%20(PDF).pdf';
+
+/** Tracking / list tag sent as `source` with each Caca de Licorne signup. */
+export const CACA_LICORNE_SOURCE_TAG = 'free_caca_de_licorne';
+
 /** Preview images of the 6 carnet pages ("La Collection Complète" section). */
 export const FREE_CHRISTMAS_PAGE_IMAGES = {
   page01:

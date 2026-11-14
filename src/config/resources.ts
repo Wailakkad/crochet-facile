@@ -40,4 +40,16 @@ export const FREE_RESOURCES: FreeResource[] = [
     href: ROUTES.sapinPatron,
     ctaLabel: 'Télécharger le patron',
   },
+  {
+    slug: 'caca-de-licorne-amigurumi',
+    badge: 'Inscription e-mail',
+    category: 'Patron amigurumi',
+    title: 'Caca de Licorne Amigurumi — patron gratuit',
+    description:
+      'Un amigurumi kawaii, pastel et pailleté en spirale arc-en-ciel. Patron PDF de 7 pages en français, avec photos d’étapes, à télécharger gratuitement.',
+    image: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794655778/Crochet_pattern_photo_page_98653186_2K.jpg',
+    imageAlt: 'Caca de Licorne amigurumi au crochet — patron PDF gratuit en français',
+    href: ROUTES.cacaLicorne,
+    ctaLabel: 'Recevoir le patron',
+  },
 ];

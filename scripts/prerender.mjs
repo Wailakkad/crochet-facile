@@ -40,6 +40,7 @@ const BLOG_ROUTES = [
   '/blog/crochet-noel-facile',
   '/40-idees-noel-crochet-gratuit',
   '/sapin-au-crochet-patron-gratuit',
+  '/caca-de-licorne-amigurumi-patron-gratuit',
   '/boutique',
   '/ressources-gratuites',
   '/patron-mini-breloques-amigurumi',
