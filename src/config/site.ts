@@ -18,6 +18,8 @@ export const ROUTES = {
   freeResources: '/ressources-gratuites',
   breloques: '/patron-mini-breloques-amigurumi',
   gnomesNoel: '/patron-5-gnomes-noel-crochet',
+  lapinAmigurumi: '/patron-lapin-amigurumi-facile',
+  bonhommeNeige: '/patron-bonhomme-de-neige-crochet',
 } as const;
 
 /** Returns an absolute URL when SITE_URL is configured, otherwise a root-relative path. */

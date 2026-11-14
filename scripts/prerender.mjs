@@ -44,6 +44,8 @@ const BLOG_ROUTES = [
   '/ressources-gratuites',
   '/patron-mini-breloques-amigurumi',
   '/patron-5-gnomes-noel-crochet',
+  '/patron-lapin-amigurumi-facile',
+  '/patron-bonhomme-de-neige-crochet',
 ];
 const SITEMAP_PATHS = ['/', ...BLOG_ROUTES];
 

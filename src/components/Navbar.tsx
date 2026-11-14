@@ -5,7 +5,20 @@ import { CHECKOUT_URL, BRAND } from '../config/constants';
 import { ROUTES } from '../config/site';
 import { Link, usePath } from '../router';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  /** Price shown in the header CTA — defaults to the main kit price. */
+  ctaPrice?: string;
+  /** Checkout URL for the header CTA — defaults to the main kit checkout. */
+  ctaHref?: string;
+  /** Label prefix for the header CTA — defaults to "Obtenir le kit". */
+  ctaLabel?: string;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({
+  ctaPrice = BRAND.price,
+  ctaHref = CHECKOUT_URL,
+  ctaLabel = 'Obtenir le kit',
+}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const path = usePath();
@@ -103,10 +116,12 @@ export const Navbar: React.FC = () => {
           {/* Right CTA */}
           <div className="flex items-center gap-3">
             <a
-              href={CHECKOUT_URL}
+              href={ctaHref}
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 bg-[#355748] hover:bg-[#284337] text-white text-xs sm:text-sm font-semibold rounded-[12px] shadow-sm transition-all duration-200 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#355748]"
             >
-              <span>Obtenir le kit — {BRAND.price}</span>
+              <span>
+                {ctaLabel} — {ctaPrice}
+              </span>
               <ArrowRight className="w-3.5 h-3.5 hidden sm:inline" />
             </a>
 
@@ -144,10 +159,10 @@ export const Navbar: React.FC = () => {
               ))}
               <div className="pt-3">
                 <a
-                  href={CHECKOUT_URL}
+                  href={ctaHref}
                   className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-[#355748] text-white text-sm font-semibold rounded-[12px] shadow-sm hover:bg-[#284337] transition-colors"
                 >
-                  Obtenir le kit complet — {BRAND.price}
+                  {ctaLabel} — {ctaPrice}
                 </a>
               </div>
             </nav>

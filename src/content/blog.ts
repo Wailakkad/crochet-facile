@@ -1,10 +1,12 @@
 import IMAGES from '../assets/images';
 import { absoluteUrl, ROUTES } from '../config/site';
 import {
+  BONHOMME_NEIGE_LANDING_PAGE,
   BRELOQUES_LANDING_PAGE,
   FREE_CHRISTMAS_LEAD_PAGE,
   FREE_RESOURCES_PAGE,
   GNOMES_NOEL_LANDING_PAGE,
+  LAPIN_AMIGURUMI_LANDING_PAGE,
   SAPIN_PATRON_PAGE,
   STORE_PAGE,
 } from './seo';
@@ -597,6 +599,8 @@ export const BLOG_PAGES: Record<string, SeoRecord> = {
   [ROUTES.freeResources]: FREE_RESOURCES_PAGE,
   [ROUTES.breloques]: BRELOQUES_LANDING_PAGE,
   [ROUTES.gnomesNoel]: GNOMES_NOEL_LANDING_PAGE,
+  [ROUTES.lapinAmigurumi]: LAPIN_AMIGURUMI_LANDING_PAGE,
+  [ROUTES.bonhommeNeige]: BONHOMME_NEIGE_LANDING_PAGE,
 };
 
 export const SITEMAP_PATHS: string[] = [
@@ -610,4 +614,6 @@ export const SITEMAP_PATHS: string[] = [
   ROUTES.freeResources,
   ROUTES.breloques,
   ROUTES.gnomesNoel,
+  ROUTES.lapinAmigurumi,
+  ROUTES.bonhommeNeige,
 ];

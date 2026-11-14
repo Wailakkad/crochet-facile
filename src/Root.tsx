@@ -9,6 +9,8 @@ import { StorePage } from './pages/StorePage';
 import { FreeResourcesPage } from './pages/FreeResourcesPage';
 import { BreloquesLandingPage } from './pages/BreloquesLandingPage';
 import { GnomesNoelLandingPage } from './pages/GnomesNoelLandingPage';
+import { LapinAmigurumiLandingPage } from './pages/LapinAmigurumiLandingPage';
+import { BonhommeNeigeLandingPage } from './pages/BonhommeNeigeLandingPage';
 import { Seo } from './components/blog/Seo';
 import { HOME_PAGE } from './content/seo';
 import { ROUTES } from './config/site';
@@ -40,6 +42,10 @@ export default function Root() {
       return <BreloquesLandingPage />;
     case ROUTES.gnomesNoel:
       return <GnomesNoelLandingPage />;
+    case ROUTES.lapinAmigurumi:
+      return <LapinAmigurumiLandingPage />;
+    case ROUTES.bonhommeNeige:
+      return <BonhommeNeigeLandingPage />;
     default:
       return (
         <>

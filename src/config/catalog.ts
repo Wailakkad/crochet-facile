@@ -105,6 +105,12 @@ const GNOMES_IMAGES = {
   pereNoel: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794394793/Le_P%C3%A8re_No%C3%ABl.jpg',
 } as const;
 
+/** Payhip checkout link for the lapin amigurumi product. */
+export const LAPIN_CHECKOUT_URL = 'https://payhip.com/b/GqZuR';
+
+/** Payhip checkout link for the bonhomme de neige product. */
+export const BONHOMME_NEIGE_CHECKOUT_URL = 'https://payhip.com/b/iUktQ';
+
 export const PRODUCTS: Product[] = [
   {
     slug: 'decorations-noel',
@@ -201,11 +207,75 @@ export const PRODUCTS: Product[] = [
       'Téléchargement immédiat après achat',
     ],
   },
+  {
+    slug: 'lapin-amigurumi',
+    name: 'Lapin Amigurumi – Patron Crochet PDF Facile (Débutant)',
+    category: 'Patron PDF · Débutant',
+    tagline: 'Un adorable lapin kawaii d’environ 10 cm, facile et rapide.',
+    description:
+      'Ce patron PDF en français guide pas à pas la création d’un mignon lapin amigurumi de 10 cm : cercle magique expliqué, instructions tour par tour (tête, corps, oreilles, bras, jambes, queue) et conseils d’assemblage. Uniquement des points de base — idéal pour les débutantes.',
+    price: '1,97 €',
+    priceNumber: 1.97,
+    currency: 'EUR',
+    checkoutUrl: LAPIN_CHECKOUT_URL,
+    landingHref: '/patron-lapin-amigurumi-facile',
+    badge: 'Nouveau',
+    images: [
+      {
+        src: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794653661/lapin_hero_image.jpg',
+        alt: 'Lapin amigurumi au crochet — patron PDF facile en français',
+      },
+      {
+        src: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794653661/lapin_cta_image.jpg',
+        alt: 'Patron PDF Lapin Amigurumi — 10 cm, niveau débutant',
+      },
+    ],
+    features: [
+      'Patron PDF de 6 pages, 100 % en français',
+      'Cercle magique expliqué pas à pas',
+      'Tour par tour : tête, corps, oreilles, bras, jambes, queue',
+      'Niveau débutant · environ 10 cm · crochet 3,5 mm',
+      'Téléchargement immédiat après achat',
+    ],
+  },
+  {
+    slug: 'bonhomme-de-neige-amigurumi',
+    name: 'Bonhomme de Neige au Crochet – Amigurumi 22 cm avec Chapka et Écharpe',
+    category: 'Patron PDF · Facile',
+    tagline: 'Chapka ushanka, écharpe verte et nez en carotte : le Noël parfait.',
+    description:
+      'Un bonhomme de neige de 22 cm avec sa chapka rouge et marron, son écharpe verte, ses moufles rouges et son nez en carotte. Patron facile en français de plus de 10 pages, pas à pas avec photos des étapes clés, écharpe en crochet OU tricot, et glossaire des abréviations.',
+    price: '2,90 €',
+    priceNumber: 2.9,
+    currency: 'EUR',
+    checkoutUrl: BONHOMME_NEIGE_CHECKOUT_URL,
+    landingHref: '/patron-bonhomme-de-neige-crochet',
+    badge: 'Nouveau',
+    images: [
+      {
+        src: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794652411/hero_image_-_bonehome.jpg',
+        alt: 'Bonhomme de neige au crochet avec chapka et écharpe — patron PDF en français',
+      },
+      {
+        src: 'https://res.cloudinary.com/dhkyla1rv/image/upload/v1794652411/cta_image_-_bone_home.jpg',
+        alt: 'Patron PDF Bonhomme de Neige au crochet — 22 cm, chapka et écharpe',
+      },
+    ],
+    features: [
+      'Patron PDF de 10+ pages en français, avec photos',
+      'Pièces tour par tour : tête, corps, bras, chapka, écharpe',
+      'Écharpe en version crochet OU tricot',
+      'Niveau facile · environ 22 cm · crochet 2,0 mm',
+      'Téléchargement immédiat après achat',
+    ],
+  },
 ];
 
 export const FEATURED_PRODUCT: Product = PRODUCTS[0];
 export const BRELOQUES_PRODUCT: Product = PRODUCTS[1];
 export const GNOMES_PRODUCT: Product = PRODUCTS[2];
+export const LAPIN_PRODUCT: Product = PRODUCTS[3];
+export const BONHOMME_NEIGE_PRODUCT: Product = PRODUCTS[4];
 
 /** True when a product has no real photo yet (styled placeholder is shown). */
 export const isImagePlaceholder = (product: Product): boolean =>

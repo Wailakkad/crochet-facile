@@ -232,6 +232,18 @@ export const STORE_PAGE: SeoRecord = {
           name: '5 Gnomes de Noël au Crochet : 1 Base, 5 Déco Uniques',
           url: absoluteUrl(ROUTES.gnomesNoel),
         },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'Lapin Amigurumi – Patron Crochet PDF Facile (Débutant)',
+          url: absoluteUrl(ROUTES.lapinAmigurumi),
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Bonhomme de Neige au Crochet – Amigurumi 22 cm avec Chapka et Écharpe',
+          url: absoluteUrl(ROUTES.bonhommeNeige),
+        },
       ],
     },
   },
@@ -338,6 +350,109 @@ export const GNOMES_NOEL_LANDING_PAGE: SeoRecord = {
       name: GNOMES_NOEL_TITLE,
       description: GNOMES_NOEL_DESCRIPTION,
       url: absoluteUrl(ROUTES.gnomesNoel),
+      inLanguage: 'fr-FR',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Crochet Facile',
+        url: absoluteUrl(ROUTES.home),
+      },
+    },
+  ],
+};
+
+const LAPIN_AMIGURUMI_TITLE =
+  'Lapin Amigurumi – Patron Crochet PDF Facile Débutant (10 cm) | Crochet Facile';
+const LAPIN_AMIGURUMI_DESCRIPTION =
+  'Patron PDF de lapin amigurumi en français, niveau débutant : 6 pages, tour par tour, cercle magique expliqué. Lapin kawaii d’environ 10 cm, téléchargement immédiat à 1,97 €.';
+
+export const LAPIN_AMIGURUMI_LANDING_PAGE: SeoRecord = {
+  title: LAPIN_AMIGURUMI_TITLE,
+  description: LAPIN_AMIGURUMI_DESCRIPTION,
+  keywords:
+    'lapin amigurumi, patron lapin crochet, lapin amigurumi débutant, patron crochet français PDF, amigurumi facile, lapin kawaii crochet',
+  path: ROUTES.lapinAmigurumi,
+  ogType: 'website',
+  ogImage: HOME_IMAGE,
+  ogImageAlt: 'Lapin amigurumi au crochet — patron PDF facile en français',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org/',
+      '@type': 'Product',
+      name: 'Lapin Amigurumi – Patron Crochet PDF Facile (Débutant)',
+      description:
+        'Patron PDF de 6 pages en français pour crocheter un lapin amigurumi d’environ 10 cm. Niveau débutant, cercle magique expliqué, instructions tour par tour.',
+      brand: {
+        '@type': 'Brand',
+        name: 'Crochet Facile',
+      },
+      offers: {
+        '@type': 'Offer',
+        url: absoluteUrl(ROUTES.lapinAmigurumi),
+        priceCurrency: 'EUR',
+        price: '1.97',
+        priceValidUntil: '2027-12-31',
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: LAPIN_AMIGURUMI_TITLE,
+      description: LAPIN_AMIGURUMI_DESCRIPTION,
+      url: absoluteUrl(ROUTES.lapinAmigurumi),
+      inLanguage: 'fr-FR',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Crochet Facile',
+        url: absoluteUrl(ROUTES.home),
+      },
+    },
+  ],
+};
+
+const BONHOMME_NEIGE_TITLE =
+  'Bonhomme de Neige au Crochet – Amigurumi 22 cm Chapka & Écharpe (PDF) | Crochet Facile';
+const BONHOMME_NEIGE_DESCRIPTION =
+  'Patron PDF bonhomme de neige de 22 cm en français : chapka ushanka, écharpe verte, moufles rouges. Facile, photos des étapes clés, 10+ pages, téléchargement immédiat à 2,90 €.';
+
+export const BONHOMME_NEIGE_LANDING_PAGE: SeoRecord = {
+  title: BONHOMME_NEIGE_TITLE,
+  description: BONHOMME_NEIGE_DESCRIPTION,
+  keywords:
+    'bonhomme de neige crochet, amigurumi bonhomme de neige, patron noël crochet, chapka amigurumi, patron crochet facile français, décoration noël crochet',
+  path: ROUTES.bonhommeNeige,
+  ogType: 'website',
+  ogImage: HOME_IMAGE,
+  ogImageAlt:
+    'Bonhomme de neige au crochet avec chapka et écharpe — patron PDF en français',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org/',
+      '@type': 'Product',
+      name: 'Bonhomme de Neige au Crochet – Amigurumi 22 cm avec Chapka et Écharpe',
+      description:
+        'Patron PDF de plus de 10 pages en français : bonhomme de neige de 22 cm avec chapka ushanka, écharpe (crochet ou tricot), moufles et nez en carotte. Niveau facile.',
+      brand: {
+        '@type': 'Brand',
+        name: 'Crochet Facile',
+      },
+      offers: {
+        '@type': 'Offer',
+        url: absoluteUrl(ROUTES.bonhommeNeige),
+        priceCurrency: 'EUR',
+        price: '2.90',
+        priceValidUntil: '2027-12-31',
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: BONHOMME_NEIGE_TITLE,
+      description: BONHOMME_NEIGE_DESCRIPTION,
+      url: absoluteUrl(ROUTES.bonhommeNeige),
       inLanguage: 'fr-FR',
       isPartOf: {
         '@type': 'WebSite',
